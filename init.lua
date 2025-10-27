@@ -256,7 +256,10 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-fugitive',
+  'tpope/vim-fugitive', -- Git support
+  'lervag/vimtex', -- LaTeX support
+  'JuliaEditorSupport/julia-vim', -- Julia support
+  -- 'kdheepak/JuliaFormatter.vim', -- Julia formatter
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -963,7 +966,7 @@ require('lazy').setup({
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'ruby', 'julia' } },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
@@ -1027,6 +1030,9 @@ vim.keymap.set('n', '<leader>gl', ':vertical Git log<CR>', { desc = 'git log' })
 vim.keymap.set('n', '<leader>gp', ':Git push<CR>', { desc = 'git push' })
 vim.keymap.set('n', '<leader>gs', ':vertical Git<CR>', { desc = 'git status' })
 vim.keymap.set('n', '<leader>gt', ':Git pull<CR>', { desc = 'git pull' })
+
+-- vim.keymap.set('n', '<leader>f', ':JuliaFormatterFormat<CR>', { desc = '[F]ormat buffer' })
+-- vim.keymap.set('v', '<leader>f', ':JuliaFormatterFormat<CR>', { desc = '[F]ormat selection' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
