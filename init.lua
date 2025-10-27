@@ -1021,5 +1021,12 @@ require('lazy').setup({
   },
 })
 
+vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { desc = 'git commit' })
+vim.keymap.set('n', '<leader>gd', ':Git diff<CR>', { desc = 'git diff' })
+vim.keymap.set('n', '<leader>gl', ':vertical Git log<CR>', { desc = 'git log' })
+vim.keymap.set('n', '<leader>gp', ':Git<CR>', { desc = 'git push' })
+vim.keymap.set('n', '<leader>gs', ':vertical Git<CR>', { desc = 'git status' })
+vim.keymap.set('n', '<leader>gt', ':Git<CR>', { desc = 'git pull' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
