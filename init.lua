@@ -118,6 +118,14 @@ vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
+-- Use spaces instead of tabs
+vim.o.expandtab = true
+-- Indent by 4 spaces
+vim.o.shiftwidth = 4
+-- A tab counts for 4 spaces
+vim.o.tabstop = 4
+-- Auto-indent new lines
+vim.o.smartindent = true
 -- Enable break indent
 vim.o.breakindent = true
 
