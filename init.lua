@@ -967,6 +967,15 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby', 'julia' } },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<CR>",       -- Start selection (Enter)
+          node_incremental = "<CR>",     -- Expand to next node
+          scope_incremental = "<S-CR>",  -- Expand to next scope (Shift+Enter)
+          node_decremental = "<BS>",     -- Shrink selection (Backspace)
+        },
+      },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
