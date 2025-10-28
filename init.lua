@@ -1040,6 +1040,7 @@ require('lazy').setup({
   },
 })
 
+vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { desc = 'git blame' })
 vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { desc = 'git commit' })
 vim.keymap.set('n', '<leader>gd', ':Git diff<CR>', { desc = 'git diff' })
 vim.keymap.set('n', '<leader>gl', ':vertical Git log<CR>', { desc = 'git log' })
