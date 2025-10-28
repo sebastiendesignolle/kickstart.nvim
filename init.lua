@@ -914,7 +914,7 @@ require('lazy').setup({
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   { -- Collection of various small independent plugins/modules
-    'echasnovski/mini.nvim',
+    'nvim-mini/mini.nvim',
     config = function()
       -- Better Around/Inside textobjects
       --
@@ -929,7 +929,14 @@ require('lazy').setup({
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      require('mini.surround').setup {
+        mappings = {
+          add = 'sq',
+        },
+      }
+
+      -- Equivalent of old tabular plugin
+      require('mini.align').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -970,10 +977,10 @@ require('lazy').setup({
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<CR>",       -- Start selection (Enter)
-          node_incremental = "<CR>",     -- Expand to next node
-          scope_incremental = "<S-CR>",  -- Expand to next scope (Shift+Enter)
-          node_decremental = "<BS>",     -- Shrink selection (Backspace)
+          init_selection = '<CR>', -- Start selection (Enter)
+          node_incremental = '<CR>', -- Expand to next node
+          scope_incremental = '<S-CR>', -- Expand to next scope (Shift+Enter)
+          node_decremental = '<BS>', -- Shrink selection (Backspace)
         },
       },
     },
