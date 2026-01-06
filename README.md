@@ -22,7 +22,7 @@ If you are experiencing issues, please make sure you have the latest versions.
 ### Install External Dependencies
 
 External Requirements:
-- Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
+- Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`), `xclip`
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation),
   [fd-find](https://github.com/sharkdp/fd#installation),
   [tree-sitter](https://github.com/tree-sitter/tree-sitter/releases),
